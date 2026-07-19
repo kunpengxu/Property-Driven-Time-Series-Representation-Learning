@@ -29,7 +29,7 @@ The repository provides a living collection of reviewed methods, benchmarks, rel
 - [Domain-Specific Applications](#domain-specific-applications)
 - [Benchmark Datasets](#benchmark-datasets)
 - [Related Surveys](#related-surveys)
-- [Other Awesome Repositories](#other-awesome-repositories)
+- [Other Related Repositories](#other-related-repositories)
 - [Repository Structure](#repository-structure)
 - [Contributing](#contributing)
 - [Citation](#citation)
@@ -181,9 +181,15 @@ Transferability concerns cross-task, cross-domain, and cross-modal generalizatio
 | Universal Time-Series Representation Learning: A Survey | Patara Trirat, Yooju Shin, Junhyeok Kang, Youngeun Nam, et al. | arXiv, 2024 | [arXiv](https://arxiv.org/abs/2401.03717) |
 | Transformers in time series: a survey | Qingsong Wen, Tian Zhou, Chaoli Zhang, Weiqi Chen, et al. | IJCAI, 2023 | [DOI](https://doi.org/10.24963/ijcai.2023/759) |
 
-## Other Awesome Repositories
+## Other Related Repositories
 
 - [awesome-deep-time-series-representations](https://github.com/itouchz/awesome-deep-time-series-representations) - A broad awesome list for deep time-series representation learning.
+- [awesome-AI-for-time-series-papers](https://github.com/qingsongedu/awesome-AI-for-time-series-papers) - A curated list of AI methods and papers for time-series analysis.
+- [time-series-ptms](https://github.com/qianlima-lab/time-series-ptms) - A collection of pre-trained and foundation models for time series.
+- [time-series-transformers-review](https://github.com/qingsongedu/time-series-transformers-review) - Resources accompanying a review of Transformers for time series.
+- [Time-Series-Works-Conferences](https://github.com/lixus7/Time-Series-Works-Conferences) - Conference-oriented resources for time-series research.
+- [Awesome-TimeSeries-AIOps-LM-LLM](https://github.com/qingsongedu/Awesome-TimeSeries-AIOps-LM-LLM) - Related resources on time-series AIOps, language models, and LLMs.
+- [Awesome-SSL4TS](https://github.com/qingsongedu/Awesome-SSL4TS) - A curated list for self-supervised learning for time series.
 - Add related repositories through pull requests, especially resources that align with the property-driven taxonomy.
 
 ## Repository Structure
