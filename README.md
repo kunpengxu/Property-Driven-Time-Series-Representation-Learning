@@ -1,4 +1,4 @@
-# Awesome Property-Driven Time-Series Representation Learning
+# Property-Driven Time-Series Representation Learning
 
 **Understanding Time-Series Representations: A Property-Driven Survey**
 
