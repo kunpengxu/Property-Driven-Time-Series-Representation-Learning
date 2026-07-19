@@ -1,28 +1,30 @@
-# Awesome-Property-Driven-Time-Series-Representation-Learning
+# Awesome Property-Driven Time-Series Representation Learning
+
+**Understanding Time-Series Representations: A Property-Driven Survey**
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
-[![License](https://img.shields.io/badge/License-TBD-lightgrey.svg)](#license)
 
-A curated awesome list for **time-series representation learning (TSRL)**, organized by the properties that learned representations should exhibit.
+This repository accompanies the survey **Understanding Time-Series Representations: A Property-Driven Survey** by Kunpeng Xu, Soumaya Cherkaoui, Limei Lin, Chao Lin, Lifei Chen, Feng Xia, Jie Wu, and Shengrui Wang.
 
-TSRL studies how to transform raw sequential observations into compact, informative, and transferable representations for forecasting, classification, anomaly detection, imputation, retrieval, clustering, segmentation, and related tasks.
+The survey organizes time-series representation learning (TSRL) literature from a **property-driven perspective**, emphasizing the properties learned representations should exhibit rather than primarily grouping methods by learning paradigm or architecture. It covers supervised, self-supervised, and pre-trained foundation-model approaches across forecasting, classification, anomaly detection, imputation, retrieval, clustering, segmentation, and related tasks.
 
-This repository accompanies the survey paper **Learning from Time: A Property-Driven Survey on Time-Series Representation Learning**. Unlike architecture-only lists, this page is organized by a **property-driven taxonomy**: temporal fidelity, structural integrity, robustness, and transferability.
+The repository provides a living collection of reviewed methods, benchmarks, related surveys, and resources aligned with the survey's property-driven taxonomy: temporal fidelity, structural integrity, robustness, and transferability.
 
-`Paper:` TBD  |  `arXiv:` TBD  |  `PDF:` TBD  |  `Code:` TBD  |  `Citation:` [BibTeX](#citation)
+`Paper:` coming soon  |  `arXiv:` coming soon  |  `Citation:` [BibTeX](#citation)
 
-![Overview](figures/fig1.png)
+![Conceptual overview of time-series representation learning, including data characteristics, learning paradigms, representation forms, and supported downstream tasks.](figures/fig1.png)
 *Figure 1. Conceptual overview of time-series representation learning (TSRL): data characteristics, learning paradigms, representation forms, and downstream support.*
 
 ## Table of Contents
 
 - [Property-Driven Taxonomy](#property-driven-taxonomy)
   - [Full Taxonomy Map (Figure 4)](#full-taxonomy-map-figure-4)
-  - [P1 Temporal Fidelity](#p1-temporal-fidelity)
-  - [P2 Structural Integrity](#p2-structural-integrity)
-  - [P3 Representation Robustness](#p3-representation-robustness)
-  - [P4 Transferability](#p4-transferability)
+  - [P1: Temporal Fidelity](#p1-temporal-fidelity)
+  - [P2: Structural Integrity](#p2-structural-integrity)
+  - [P3: Robustness](#p3-robustness)
+  - [P4: Transferability](#p4-transferability)
+  - [Consolidated Taxonomy Table](#consolidated-taxonomy-table)
 - [Learning Paradigms](#learning-paradigms)
 - [Domain-Specific Applications](#domain-specific-applications)
 - [Benchmark Datasets](#benchmark-datasets)
@@ -37,47 +39,48 @@ This repository accompanies the survey paper **Learning from Time: A Property-Dr
 
 The survey asks a representation-centered question: **what properties should learned time-series representations exhibit?** The resulting taxonomy groups methods by the representation properties they primarily target.
 
-![Roadmap](figures/roadmap.png)
-*Figure 3. Survey roadmap: property taxonomy (P1-P4), learning paradigms, domain applications, and benchmark/evaluation scope.*
+![Survey roadmap connecting the property taxonomy with learning paradigms, domain-specific applications, benchmarks, and evaluation tasks.](figures/roadmap.png)
+*Figure 3. Survey roadmap.*
 
 ### Full Taxonomy Map (Figure 4)
 
-![Figure 4: Property-Driven Taxonomy](figures/fig4.png)
+![Representative property-driven taxonomy map of time-series representation learning methods grouped by temporal fidelity, structural integrity, robustness, and transferability.](figures/fig4.png)
+*Figure 4. Representative property-driven taxonomy map.*
 
-### P1 Temporal Fidelity
-Temporal fidelity concerns local patterns, long-range dependencies, and multi-scale temporal structure.
+### P1: Temporal Fidelity
+Temporal fidelity concerns short-term dependency modeling, long-term dependency modeling, and multi-scale temporal structure.
 
-### P2 Structural Integrity
-Structural integrity concerns multivariate relations, frequency structure, and decomposition structure.
+### P2: Structural Integrity
+Structural integrity concerns multivariate relationships, frequency-domain structure, and decomposition-based representations.
 
-### P3 Representation Robustness
-Representation robustness concerns noise/missingness, non-stationarity, and irregular sampling.
+### P3: Robustness
+Robustness concerns noise and missing data, non-stationarity and concept drift, and irregular sampling.
 
-### P4 Transferability
+### P4: Transferability
 Transferability concerns cross-task, cross-domain, and cross-modal generalization.
 
 ### Consolidated Taxonomy Table
 
 | Property | Sub-property | Paper | Authors | Venue/Year | Description | Links |
 |---|---|---|---|---|---|---|
-| P1 | P1.1 Short-term dependency | An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling | Shaojie Bai, J. Zico Kolter, Vladlen Koltun | arXiv, 2018 | Establishes temporal convolutional networks as strong generic sequence encoders with dilated local receptive fields. | [arXiv](https://arxiv.org/abs/1803.01271) |
-| P1 | P1.1 Short-term dependency | Omni-Scale CNNs: a simple and effective kernel size configuration for time series classification | Wensi Tang, Guodong Long, Lu Liu, Tianyi Zhou, et al. | ICLR, 2022 | Uses omni-scale convolutional kernels to capture discriminative local patterns for time-series classification. | [OpenReview](https://openreview.net/forum?id=PDYs7Z2XFGv) |
-| P1 | P1.1 Short-term dependency | ModernTCN: A Modern Pure Convolution Structure for General Time Series Analysis | Luo Donghao, Wang Xue | ICLR, 2024 | Revisits convolutional encoders for general time-series analysis with modern architectural choices. | [OpenReview](https://openreview.net/forum?id=vpJMJerXHU) |
-| P1 | P1.2 Long-term dependency | A Transformer-based Framework for Multivariate Time Series Representation Learning | George Zerveas, Srideepika Jayaraman, Dhaval Patel, Anuradha Bhamidipaty, et al. | KDD, 2021 | Learns global temporal representations for multivariate series with Transformer encoders. | [DOI](https://doi.org/10.1145/3447548.3467401) |
-| P1 | P1.2 Long-term dependency | A Time Series is Worth 64 Words: Long-term Forecasting with Transformers | Yuqi Nie, Nam H. Nguyen, Phanwadee Sinthong, Jayant Kalagnanam | ICLR, 2023 | Introduces patch-wise tokenization to improve Transformer efficiency and long-horizon forecasting. | [OpenReview](https://openreview.net/forum?id=Jbdc0vTOcol) |
-| P1 | P1.2 Long-term dependency | Mamba: Linear-Time Sequence Modeling with Selective State Spaces | Albert Gu, Tri Dao | arXiv, 2024 | Provides selective state-space sequence modeling for efficient long-context representation learning. | [arXiv](https://arxiv.org/abs/2312.00752) |
-| P1 | P1.3 Multi-scale structure | TimesNet: Temporal 2D-Variation Modeling for General Time Series Analysis | Haixu Wu, Tengge Hu, Yong Liu, Hang Zhou, et al. | ICLR, 2023 | Models multi-period temporal variation by transforming one-dimensional series into two-dimensional temporal representations. | [OpenReview](https://openreview.net/forum?id=ju_Uqw384Oq) |
-| P1 | P1.3 Multi-scale structure | HDMixer: Hierarchical Dependency with Extendable Patch for Multivariate Time Series Forecasting | Qihe Huang, Lei Shen, Ruixin Zhang, Jiahuan Cheng, et al. | AAAI, 2024 | Combines extendable patches and hierarchical mixing to capture short-term, long-term, and cross-variable dependencies. | [AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/29155) |
-| P1 | P1.3 Multi-scale structure | TimeMixer: Decomposable Multiscale Mixing for Time Series Forecasting | Shiyu Wang, Haixu Wu, Xiaoming Shi, Tengge Hu, et al. | ICLR, 2024 | Mixes temporal patterns across decomposed scales for long- and short-term forecasting. | [OpenReview](https://openreview.net/forum?id=7oLshfEIC2) |
-| P2 | P2.1 Multivariate relationship | MSGNet: Learning Multi-Scale Inter-series Correlations for Multivariate Time Series Forecasting | Wanlin Cai, Yuxuan Liang, Xianggen Liu, Jianshuai Feng, Yuankai Wu | AAAI, 2024 | Uses frequency analysis and adaptive graph convolution to learn inter-series correlations across scales. | [AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/28991) |
-| P2 | P2.1 Multivariate relationship | Fully-Connected Spatial-Temporal Graph for Multivariate Time-Series Data | Yucheng Wang, Yuecong Xu, Jianfei Yang, Min Wu, et al. | AAAI, 2024 | Constructs fully connected spatial-temporal graphs to capture dependencies between sensors and timestamps. | [AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/29500) |
-| P2 | P2.1 Multivariate relationship | Crossformer: Transformer Utilizing Cross-Dimension Dependency for Multivariate Time Series Forecasting | Yunhao Zhang, Junchi Yan | ICLR, 2023 | Uses two-stage attention to model cross-dimension dependencies in multivariate forecasting. | [OpenReview](https://openreview.net/forum?id=vSVLM2j9eie) |
+| P1 | P1.1 Short-term dependency modeling | An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling | Shaojie Bai, J. Zico Kolter, Vladlen Koltun | arXiv, 2018 | Establishes temporal convolutional networks as strong generic sequence encoders with dilated local receptive fields. | [arXiv](https://arxiv.org/abs/1803.01271) |
+| P1 | P1.1 Short-term dependency modeling | Omni-Scale CNNs: a simple and effective kernel size configuration for time series classification | Wensi Tang, Guodong Long, Lu Liu, Tianyi Zhou, et al. | ICLR, 2022 | Uses omni-scale convolutional kernels to capture discriminative local patterns for time-series classification. | [OpenReview](https://openreview.net/forum?id=PDYs7Z2XFGv) |
+| P1 | P1.1 Short-term dependency modeling | ModernTCN: A Modern Pure Convolution Structure for General Time Series Analysis | Luo Donghao, Wang Xue | ICLR, 2024 | Revisits convolutional encoders for general time-series analysis with modern architectural choices. | [OpenReview](https://openreview.net/forum?id=vpJMJerXHU) |
+| P1 | P1.2 Long-term dependency modeling | A Transformer-based Framework for Multivariate Time Series Representation Learning | George Zerveas, Srideepika Jayaraman, Dhaval Patel, Anuradha Bhamidipaty, et al. | KDD, 2021 | Learns global temporal representations for multivariate series with Transformer encoders. | [DOI](https://doi.org/10.1145/3447548.3467401) |
+| P1 | P1.2 Long-term dependency modeling | A Time Series is Worth 64 Words: Long-term Forecasting with Transformers | Yuqi Nie, Nam H. Nguyen, Phanwadee Sinthong, Jayant Kalagnanam | ICLR, 2023 | Introduces patch-wise tokenization to improve Transformer efficiency and long-horizon forecasting. | [OpenReview](https://openreview.net/forum?id=Jbdc0vTOcol) |
+| P1 | P1.2 Long-term dependency modeling | Mamba: Linear-Time Sequence Modeling with Selective State Spaces | Albert Gu, Tri Dao | arXiv, 2024 | Provides selective state-space sequence modeling for efficient long-context representation learning. | [arXiv](https://arxiv.org/abs/2312.00752) |
+| P1 | P1.3 Multi-scale temporal structure | TimesNet: Temporal 2D-Variation Modeling for General Time Series Analysis | Haixu Wu, Tengge Hu, Yong Liu, Hang Zhou, et al. | ICLR, 2023 | Models multi-period temporal variation by transforming one-dimensional series into two-dimensional temporal representations. | [OpenReview](https://openreview.net/forum?id=ju_Uqw384Oq) |
+| P1 | P1.3 Multi-scale temporal structure | HDMixer: Hierarchical Dependency with Extendable Patch for Multivariate Time Series Forecasting | Qihe Huang, Lei Shen, Ruixin Zhang, Jiahuan Cheng, et al. | AAAI, 2024 | Combines extendable patches and hierarchical mixing to capture short-term, long-term, and cross-variable dependencies. | [AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/29155) |
+| P1 | P1.3 Multi-scale temporal structure | TimeMixer: Decomposable Multiscale Mixing for Time Series Forecasting | Shiyu Wang, Haixu Wu, Xiaoming Shi, Tengge Hu, et al. | ICLR, 2024 | Mixes temporal patterns across decomposed scales for long- and short-term forecasting. | [OpenReview](https://openreview.net/forum?id=7oLshfEIC2) |
+| P2 | P2.1 Multivariate relationships | MSGNet: Learning Multi-Scale Inter-series Correlations for Multivariate Time Series Forecasting | Wanlin Cai, Yuxuan Liang, Xianggen Liu, Jianshuai Feng, Yuankai Wu | AAAI, 2024 | Uses frequency analysis and adaptive graph convolution to learn inter-series correlations across scales. | [AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/28991) |
+| P2 | P2.1 Multivariate relationships | Fully-Connected Spatial-Temporal Graph for Multivariate Time-Series Data | Yucheng Wang, Yuecong Xu, Jianfei Yang, Min Wu, et al. | AAAI, 2024 | Constructs fully connected spatial-temporal graphs to capture dependencies between sensors and timestamps. | [AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/29500) |
+| P2 | P2.1 Multivariate relationships | Crossformer: Transformer Utilizing Cross-Dimension Dependency for Multivariate Time Series Forecasting | Yunhao Zhang, Junchi Yan | ICLR, 2023 | Uses two-stage attention to model cross-dimension dependencies in multivariate forecasting. | [OpenReview](https://openreview.net/forum?id=vSVLM2j9eie) |
 | P2 | P2.2 Frequency-domain structure | FEDformer: Frequency Enhanced Decomposed Transformer for Long-term Series Forecasting | Tian Zhou, Ziqing Ma, Qingsong Wen, Xue Wang, et al. | ICML, 2022 | Combines decomposition with frequency-enhanced attention for long-term seasonal forecasting. | [PMLR](https://proceedings.mlr.press/v162/zhou22g.html) |
 | P2 | P2.2 Frequency-domain structure | FITS: Modeling Time Series with $10k$ Parameters | Zhijian Xu, Ailing Zeng, Qiang Xu | ICLR, 2024 | Uses lightweight frequency interpolation for efficient time-series forecasting. | [OpenReview](https://openreview.net/forum?id=bWcnvZ3qMb) |
 | P2 | P2.2 Frequency-domain structure | Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency | Xiang Zhang, Ziyuan Zhao, Theodoros Tsiligkaridis, Marinka Zitnik | NeurIPS, 2022 | Aligns time-domain and frequency-domain views for self-supervised time-series representation learning. | [OpenReview](https://openreview.net/forum?id=OJ4mMfGKLN) |
-| P2 | P2.3 Decomposition-based representation | Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting | Haixu Wu, Jiehui Xu, Jianmin Wang, Mingsheng Long | NeurIPS, 2021 | Embeds series decomposition and auto-correlation mechanisms into Transformer forecasting. | [OpenReview](https://openreview.net/forum?id=J4gRj6d5Qm) |
-| P2 | P2.3 Decomposition-based representation | Are Transformers Effective for Time Series Forecasting? | Ailing Zeng, Muxi Chen, Lei Zhang, Qiang Xu | AAAI, 2023 | Introduces simple linear decomposition baselines that challenge complex Transformer forecasting models. | [AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/26317) |
-| P2 | P2.3 Decomposition-based representation | A Shapelet-Based Framework for Unsupervised Multivariate Time Series Representation Learning | Zhiyu Liang, Jianfeng Zhang, Chen Liang, Hongzhi Wang, et al. | PVLDB, 2023 | Learns interpretable shapelet-based representations for unsupervised multivariate time-series analysis. | [DOI](https://doi.org/10.14778/3632093.3632103) |
+| P2 | P2.3 Decomposition-based representations | Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting | Haixu Wu, Jiehui Xu, Jianmin Wang, Mingsheng Long | NeurIPS, 2021 | Embeds series decomposition and auto-correlation mechanisms into Transformer forecasting. | [OpenReview](https://openreview.net/forum?id=J4gRj6d5Qm) |
+| P2 | P2.3 Decomposition-based representations | Are Transformers Effective for Time Series Forecasting? | Ailing Zeng, Muxi Chen, Lei Zhang, Qiang Xu | AAAI, 2023 | Introduces simple linear decomposition baselines that challenge complex Transformer forecasting models. | [AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/26317) |
+| P2 | P2.3 Decomposition-based representations | A Shapelet-Based Framework for Unsupervised Multivariate Time Series Representation Learning | Zhiyu Liang, Jianfeng Zhang, Chen Liang, Hongzhi Wang, et al. | PVLDB, 2023 | Learns interpretable shapelet-based representations for unsupervised multivariate time-series analysis. | [DOI](https://doi.org/10.14778/3632093.3632103) |
 | P3 | P3.1 Noise and missing data | SimMTM: A Simple Pre-Training Framework for Masked Time-Series Modeling | Jiaxiang Dong, Haixu Wu, Haoran Zhang, Li Zhang, et al. | NeurIPS, 2023 | Uses masked time-series modeling to learn representations robust to missing segments. | [OpenReview](https://openreview.net/forum?id=ginTcBUnL8) |
 | P3 | P3.1 Noise and missing data | Self-Supervised Learning of Time Series Representation via Diffusion Process and Imputation-Interpolation-Forecasting Mask | Zineb Senane, Lele Cao, Valentin Leonhard Buchner, Yusuke Tashiro, et al. | KDD, 2024 | Learns robust representations through diffusion-based masking for imputation, interpolation, and forecasting. | [DOI](https://doi.org/10.1145/3637528.3671673) |
 | P3 | P3.1 Noise and missing data | TimeDART: A Diffusion Autoregressive Transformer for Self-Supervised Time Series Representation | Daoyu Wang, Mingyue Cheng, Zhiding Liu, Qi Liu | ICML, 2025 | Uses diffusion denoising and autoregressive modeling for noisy time-series representation learning. | [OpenReview](https://openreview.net/forum?id=v2G9HML7ep) |
@@ -147,14 +150,16 @@ Transferability concerns cross-task, cross-domain, and cross-modal generalizatio
 .
 |-- README.md
 `-- figures/
-|   |-- fig1.png
-|   |-- fig4.png
-|   `-- roadmap.png
+    |-- fig1.png
+    |-- fig4.png
+    `-- roadmap.png
 ```
 
 ## Contributing
 
-Contributions are welcome. Please open an issue or pull request for missing papers, incorrect metadata, broken links, or taxonomy suggestions.
+This repository is a living resource and may be updated as new TSRL methods, benchmarks, and related surveys appear.
+
+Contributions are welcome. Please open an issue or pull request for missing papers, incorrect metadata, broken links, or taxonomy suggestions. Proposed additions should fit the property-driven taxonomy and preserve official paper titles, author lists, venues, and links.
 
 When adding a paper, please include:
 
@@ -168,10 +173,13 @@ When adding a paper, please include:
 If this survey or repository is useful for your research, please cite:
 
 ```bibtex
-@misc{xu2026learning,
-  title={Learning from Time: A Property-Driven Survey on Time-Series Representation Learning},
-  author={Xu, Kunpeng and Cherkaoui, Soumaya and Lin, Limei and Lin, Chao and Chen, Lifei and Wang, Shengrui},
-  year={2026}
+@article{xu2026understanding,
+  title   = {Understanding Time-Series Representations: A Property-Driven Survey},
+  author  = {Xu, Kunpeng and Cherkaoui, Soumaya and Lin, Limei and
+             Lin, Chao and Chen, Lifei and Xia, Feng and Wu, Jie and
+             Wang, Shengrui},
+  journal = {ACM Computing Surveys},
+  year    = {2026}
 }
 ```
 
