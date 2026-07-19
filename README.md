@@ -215,13 +215,12 @@ When adding a paper, please include:
 If this survey or repository is useful for your research, please cite:
 
 ```bibtex
-@article{xu2026understanding,
-  title   = {Understanding Time-Series Representations: A Property-Driven Survey},
-  author  = {Xu, Kunpeng and Cherkaoui, Soumaya and Lin, Limei and
-             Lin, Chao and Chen, Lifei and Xia, Feng and Wu, Jie and
-             Wang, Shengrui},
-  journal = {ACM Computing Surveys},
-  year    = {2026}
+@misc{xu2026understanding,
+  title  = {Understanding Time-Series Representations: A Property-Driven Survey},
+  author = {Xu, Kunpeng and Cherkaoui, Soumaya and Lin, Limei and
+            Lin, Chao and Chen, Lifei and Xia, Feng and Wu, Jie and
+            Wang, Shengrui},
+  year   = {2026}
 }
 ```
 
