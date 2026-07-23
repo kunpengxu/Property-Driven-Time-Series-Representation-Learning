@@ -5,7 +5,7 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
 
-This repository accompanies the survey **Understanding Time-Series Representations: A Property-Driven Survey** by Kunpeng Xu, Soumaya Cherkaoui, Limei Lin, Chao Lin, Lifei Chen, Feng Xia, Jie Wu, and Shengrui Wang.
+This repository accompanies the survey **Understanding Time-Series Representations: A Property-Driven Survey** by Kunpeng Xu, Soumaya Cherkaoui, Limei Lin, Lifei Chen, Feng Xia, Jie Wu, and Shengrui Wang.
 
 The survey organizes time-series representation learning (TSRL) literature from a **property-driven perspective**, emphasizing the properties learned representations should exhibit rather than primarily grouping methods by learning paradigm or architecture. It covers supervised, self-supervised, and pre-trained foundation-model approaches across forecasting, classification, anomaly detection, imputation, retrieval, clustering, segmentation, and related tasks.
 
@@ -224,8 +224,7 @@ If this survey or repository is useful for your research, please cite:
 @misc{xu2026understanding,
   title  = {Understanding Time-Series Representations: A Property-Driven Survey},
   author = {Xu, Kunpeng and Cherkaoui, Soumaya and Lin, Limei and
-            Lin, Chao and Chen, Lifei and Xia, Feng and Wu, Jie and
-            Wang, Shengrui},
+            Chen, Lifei and Xia, Feng and Wu, Jie and Wang, Shengrui},
   year   = {2026}
 }
 ```
